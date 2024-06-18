@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--=tf+egtdt*303oj=5+d^(z4z0vg$g=cor+arb187qnad4#8%b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','harkitsolutions.com','']
+ALLOWED_HOSTS = ['*','harkitsolutions.com','0.0.0.0','https://mm8hpijw2k.us-east-1.awsapprunner.com','']
 
 
 # Application definition
@@ -123,6 +123,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+# settings.py
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://mm8hpijw2k.us-east-1.awsapprunner.com',
+    'https://harkitsolutions.com'
+]
 
 STORAGES = {
     "default": {

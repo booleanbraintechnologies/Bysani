@@ -20,4 +20,6 @@ EXPOSE 8000
 ENV DJANGO_SETTINGS_MODULE=Bysani.settings
 
 # Run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Bysani.wsgi:application"]
+# CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Bysani.wsgi:application"]
+
+CMD ["python", "manage.py","runserver", "0.0.0.0:8000"]
